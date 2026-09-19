@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mahima Tolani — Software Developer, Singer & AI Video Creator. Building scalable Java/Spring Boot systems by day, crafting music and AI-driven visuals by night." />
+  <meta name="author" content="Mahima Tolani" />
+  <meta name="theme-color" content="#0a0a12" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mahima Tolani · Developer × Artist" />
+  <meta property="og:description"
+    content="Software Developer, Singer & AI Video Creator based in Jaipur, India." />
+  <meta property="og:type" content="website" />
+
+  <title>Mahima Tolani · Developer × Singer × AI Video Creator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎤</text></svg>" />
+</head>
+
+<body>
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <span class="preloader-letter">M</span>
+      <span class="preloader-letter">T</span>
+      <div class="preloader-bar"><span></span></div>
+      <p class="preloader-text">Composing the experience…</p>
+    </div>
+  </div>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== 3D BACKGROUND CANVAS ===== -->
+  <canvas id="bg-canvas"></canvas>
+  <div class="grain"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <a href="#home" class="nav-logo">Mahima<span>.</span></a>
+      <ul class="nav-list" id="navList">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Journey</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#music" class="nav-link">Music</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#contact" class="btn btn-ghost nav-cta">Let's talk</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="bx bx-menu"></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal"><span class="pulse-dot"></span> Available for collaborations · Jaipur, India</p>
+        <h1 class="hero-title reveal">
+          <span class="line">Hi, I'm Mahima</span>
+          <span class="line gradient-text" id="roleText">Software Developer</span>
+        </h1>
+        <p class="hero-desc reveal">
+          I build scalable <strong>Java &amp; Spring Boot</strong> systems by day — and craft
+          <strong>music</strong> and <strong>AI-generated video</strong> by night. Where clean
+          engineering meets creative storytelling.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary" data-cursor="hover">View my work <i class="bx bx-right-arrow-alt"></i></a>
+          <a href="#music" class="btn btn-ghost" data-cursor="hover"><i class="bx bx-play-circle"></i> Hear me sing</a>
+        </div>
+        <div class="hero-socials reveal">
+          <a href="https://www.linkedin.com/in/mahima-tolani-42a337173" target="_blank" rel="noopener" data-cursor="hover" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="mailto:mahimatolani1998@gmail.com" data-cursor="hover" aria-label="Email"><i class="bx bx-envelope"></i></a>
+          <a href="https://github.com/mahima73/" target="_blank" rel="noopener" data-cursor="hover" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.instagram.com/ai_vala_bachpan/" target="_blank" rel="noopener" data-cursor="hover" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="tel:+918209387213" data-cursor="hover" aria-label="Call"><i class="bx bx-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card tilt" id="heroCard">
+          <div class="hero-card-glow"></div>
+          <div class="hero-photo">
+            <img src="assets/img/mahima.jpeg" alt="Mahima Tolani" loading="eager" />
+            <span class="hero-photo-badge"><span class="pulse-dot"></span> Live &amp; creating</span>
+          </div>
+          <div class="hero-card-top">
+            <div>
+              <p class="hero-card-name">Mahima Tolani</p>
+              <p class="hero-card-role">Developer × Artist</p>
+            </div>
+          </div>
+          <div class="equalizer" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="hero-card-tags">
+            <span>Java</span><span>Spring Boot</span><span>OOP</span><span>Vocals</span><span>AI Video</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span>scroll</span>
+      </a>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Java</span><span>•</span><span>Spring Boot</span><span>•</span><span>OOP</span><span>•</span>
+        <span>REST APIs</span><span>•</span><span>Singing</span><span>•</span><span>AI Video</span><span>•</span>
+        <span>Storytelling</span><span>•</span><span>Problem Solving</span><span>•</span>
+        <span>Java</span><span>•</span><span>Spring Boot</span><span>•</span><span>OOP</span><span>•</span>
+        <span>REST APIs</span><span>•</span><span>Singing</span><span>•</span><span>AI Video</span><span>•</span>
+        <span>Storytelling</span><span>•</span><span>Problem Solving</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about" id="about">
+      <div class="section-head reveal">
+        <span class="section-index">01</span>
+        <h2 class="section-title">About <span class="gradient-text">me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="lead">
+            I'm a Software Developer with <strong>5+ years</strong> of experience turning complex
+            problems into clean, reliable software — currently an
+            <strong>Associate Consultant at Infosys</strong>.
+          </p>
+          <p>
+            My core is object-oriented engineering with Java and Spring Boot, but my curiosity
+            doesn't stop at code. I'm a passionate <strong>singer</strong> and an
+            <strong>AI video creator</strong>, blending technology with art to tell stories that
+            resonate. Whether it's an API that scales or a melody that lingers, I care about
+            craft, detail, and emotion.
+          </p>
+          <p>
+            Based in Jaipur, Rajasthan — always up for building something meaningful.
+          </p>
+
+          <div class="about-info">
+            <div><span>Name</span><p>Mahima Tolani</p></div>
+            <div><span>Location</span><p>Jaipur, India</p></div>
+            <div><span>Role</span><p>Associate Consultant · Infosys</p></div>
+            <div><span>Email</span><p>mahimatolani1998@gmail.com</p></div>
+          </div>
+        </div>
+
+        <div class="about-side reveal">
+          <figure class="about-portrait glass" data-cursor="hover">
+            <img src="assets/img/mahima.jpeg" alt="Mahima Tolani" loading="lazy" />
+            <figcaption>Mahima Tolani · Jaipur, India</figcaption>
+          </figure>
+          <div class="about-stats">
+          <div class="stat glass" data-cursor="hover">
+            <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+            <p>Years engineering</p>
+          </div>
+          <div class="stat glass" data-cursor="hover">
+            <span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span>
+            <p>Projects &amp; features shipped</p>
+          </div>
+          <div class="stat glass" data-cursor="hover">
+            <span class="stat-num" data-count="50">0</span><span class="stat-plus">+</span>
+            <p>Songs &amp; covers performed</p>
+          </div>
+          <div class="stat glass" data-cursor="hover">
+            <span class="stat-num" data-count="2">0</span>
+            <p>Creative worlds united</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills" id="skills">
+      <div class="section-head reveal">
+        <span class="section-index">02</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">craft</span></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card glass reveal" data-cursor="hover">
+          <div class="skill-icon"><i class="bx bx-code-alt"></i></div>
+          <h3>Backend Engineering</h3>
+          <p>Robust, testable services built the right way.</p>
+          <ul class="chips">
+            <li>Java</li><li>Spring Boot</li><li>OOP</li><li>REST APIs</li><li>Microservices</li><li>JUnit</li><li>MySQL</li><li>MongoDB</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal" data-cursor="hover">
+          <div class="skill-icon"><i class="bx bx-cog"></i></div>
+          <h3>Web &amp; Tooling</h3>
+          <p>Full-stack delivery with a modern DevOps toolkit.</p>
+          <ul class="chips">
+            <li>React.js</li><li>Node/Express</li><li>Tailwind</li><li>Git</li><li>Postman</li><li>Kubernetes</li><li>Prometheus</li><li>Grafana</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal" data-cursor="hover">
+          <div class="skill-icon"><i class="bx bx-microphone"></i></div>
+          <h3>Vocal Artistry</h3>
+          <p>Trained voice across genres — covers &amp; originals.</p>
+          <ul class="chips">
+            <li>Playback</li><li>Bollywood</li><li>Harmony</li><li>Live performance</li>
+          </ul>
+        </div>
+
+        <div class="skill-card glass reveal" data-cursor="hover">
+          <div class="skill-icon"><i class="bx bx-movie-play"></i></div>
+          <h3>AI Video Creation</h3>
+          <p>Turning prompts and scripts into cinematic stories.</p>
+          <ul class="chips">
+            <li>Runway</li><li>Sora-style gen</li><li>Editing</li><li>Sound design</li><li>Storyboarding</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE / JOURNEY ===== -->
+    <section class="section experience" id="experience">
+      <div class="section-head reveal">
+        <span class="section-index">03</span>
+        <h2 class="section-title">My <span class="gradient-text">journey</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass" data-cursor="hover">
+            <span class="timeline-date">Jan 2025 — Present</span>
+            <h3>Associate Consultant</h3>
+            <p class="timeline-org">Infosys · Hyderabad, India</p>
+            <p>Delivering enterprise software as a Sr. Programmer. Migrated Walmart's Global
+              Pharmacy Host from ASP.NET to <strong>Java &amp; Spring Boot</strong> (Carbon),
+              designing RESTful APIs and Cron-based batch jobs; then led an observability
+              migration from Splunk to a <strong>Prometheus &amp; Grafana</strong> stack,
+              instrumenting custom metrics and eliminating false alerts.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass" data-cursor="hover">
+            <span class="timeline-date">Aug 2020 — Dec 2024</span>
+            <h3>Software Developer</h3>
+            <p class="timeline-org">Programmers.io · Jaipur, India</p>
+            <p>Built an internal impact-analysis product that maps variable and program
+              dependencies to cut manual effort during requirement changes. Authored REST APIs
+              with <strong>Spring Boot</strong>, wrote JUnit test suites, and drove a
+              <strong>20% gain</strong> in overall system performance.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass" data-cursor="hover">
+            <span class="timeline-date">2016 — 2020</span>
+            <h3>B.Tech, Electronics &amp; Communication</h3>
+            <p class="timeline-org">Government Engineering College, Bikaner</p>
+            <p>Built the engineering fundamentals — from signals and systems to programming —
+              that shaped a rigorous, first-principles approach to software.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass" data-cursor="hover">
+            <span class="timeline-date">Foundations</span>
+            <h3>Schooling</h3>
+            <p class="timeline-org">Kendriya Vidyalaya, Jaipur</p>
+            <p>Where discipline, curiosity, and a lifelong love for both science and music began.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS / WORK ===== -->
+    <section class="section projects" id="projects">
+      <div class="section-head reveal">
+        <span class="section-index">04</span>
+        <h2 class="section-title">Selected <span class="gradient-text">work</span></h2>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Flagship -->
+        <article class="project-card glass featured reveal" data-cursor="hover">
+          <div class="project-media">
+            <div class="project-mockup">
+              <i class="bx bx-plane-take-off"></i>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Featured · Full-stack</span>
+            <h3>Flight Reservation System</h3>
+            <p>An end-to-end flight reservation platform on a <strong>microservices</strong>
+              architecture — Spring Boot services with Eureka service discovery, documented via
+              Swagger, and a React.js frontend for dynamic, real-time flight search. Automated
+              email notifications handle booking confirmations, cancellations, and reminders.</p>
+            <ul class="chips">
+              <li>Spring Boot</li><li>React.js</li><li>Microservices</li><li>Eureka</li><li>Swagger</li><li>MySQL</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/mahima73/" target="_blank" rel="noopener" data-cursor="hover"><i class="bx bxl-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Walmart Pharmacy Migration -->
+        <article class="project-card glass reveal" data-cursor="hover">
+          <div class="project-media cyan">
+            <div class="project-mockup"><i class="bx bx-capsule"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Infosys · Backend</span>
+            <h3>Walmart Pharmacy — GPH → Carbon</h3>
+            <p>Migrated Walmart's Global Pharmacy Host from ASP.NET to Java &amp; Spring Boot.
+              Designed RESTful APIs for the pharmacy module, automated expired-group handling with
+              Cron jobs, and kept code clean by resolving SonarQube smells.</p>
+            <ul class="chips"><li>Java</li><li>Spring Boot</li><li>REST</li><li>SonarQube</li></ul>
+            <div class="project-links">
+              <a href="https://www.linkedin.com/in/mahima-tolani-42a337173/" target="_blank" rel="noopener" data-cursor="hover"><i class="bx bxl-linkedin"></i> Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Observability Migration -->
+        <article class="project-card glass reveal" data-cursor="hover">
+          <div class="project-media">
+            <div class="project-mockup"><i class="bx bx-line-chart"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Infosys · Observability</span>
+            <h3>Splunk → Prometheus &amp; Grafana</h3>
+            <p>Led an application-monitoring migration to a Prometheus–Grafana observability stack.
+              Instrumented custom metrics across legacy Java code, reconciled dashboards to kill
+              metric drift, and established monitoring best practices for the team.</p>
+            <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Java</li><li>Kubernetes</li></ul>
+            <div class="project-links">
+              <a href="https://www.linkedin.com/in/mahima-tolani-42a337173/" target="_blank" rel="noopener" data-cursor="hover"><i class="bx bxl-linkedin"></i> Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Impact Analysis Tool -->
+        <article class="project-card glass reveal" data-cursor="hover">
+          <div class="project-media cyan">
+            <div class="project-mockup"><i class="bx bx-sitemap"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Programmers.io · Product</span>
+            <h3>Impact Analysis Tool</h3>
+            <p>An internal product that maps variable and program dependencies to slash manual
+              effort during requirement changes. Built REST APIs with Spring Boot, JUnit test
+              coverage, and delivered a 20% boost in overall system performance.</p>
+            <ul class="chips"><li>Spring Boot</li><li>REST</li><li>JUnit</li><li>Java</li></ul>
+            <div class="project-links">
+              <a href="https://github.com/mahima73/" target="_blank" rel="noopener" data-cursor="hover"><i class="bx bxl-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- AI Video -->
+        <article class="project-card glass reveal" data-cursor="hover">
+          <div class="project-media violet">
+            <div class="project-mockup"><i class="bx bx-movie-play"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Creative · AI</span>
+            <h3>AI Cinematic Shorts</h3>
+            <p>A series of AI-generated cinematic shorts — from script and storyboard to
+              generation, editing, and original sound. Storytelling powered by modern
+              text-to-video models.</p>
+            <ul class="chips"><li>AI Video</li><li>Editing</li><li>Sound</li></ul>
+            <div class="project-links">
+              <a href="https://www.instagram.com/ai_vala_bachpan/" target="_blank" rel="noopener" data-cursor="hover"><i class="bx bxl-instagram"></i> Watch</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Music -->
+        <article class="project-card glass reveal" data-cursor="hover">
+          <div class="project-media rose">
+            <div class="project-mockup"><i class="bx bx-music"></i></div>
+          </div>
+          <div class="project-body">
+            <span class="project-tag">Creative · Music</span>
+            <h3>Vocal Covers &amp; Originals</h3>
+            <p>A growing collection of covers and original melodies across genres — recorded,
+              mixed, and shared. Music that carries emotion the way good code carries intent.</p>
+            <ul class="chips"><li>Vocals</li><li>Cover</li><li>Original</li></ul>
+            <div class="project-links">
+              <a href="#music" data-cursor="hover"><i class="bx bx-play-circle"></i> Listen</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== MUSIC ===== -->
+    <section class="section music" id="music">
+      <div class="section-head reveal">
+        <span class="section-index">05</span>
+        <h2 class="section-title">The <span class="gradient-text">music</span> side</h2>
+      </div>
+
+      <div class="music-wrap">
+        <div class="music-intro reveal">
+          <p class="script-text">"Every line of code is logic. Every song is a heartbeat."</p>
+          <p>
+            When I'm away from the IDE, you'll find me behind a mic. Singing is where I recharge —
+            it's the same pursuit of harmony, timing, and feeling that makes me a better engineer.
+          </p>
+          <a href="https://www.instagram.com/ai_vala_bachpan/" target="_blank" rel="noopener" class="btn btn-primary" data-cursor="hover">
+            <i class="bx bxl-instagram"></i> Visit my Instagram
+          </a>
+        </div>
+
+        <div class="player glass reveal" data-cursor="hover">
+          <div class="player-art" id="playerArt">
+            <i class="bx bxs-music"></i>
+            <div class="player-rings"><span></span><span></span><span></span></div>
+          </div>
+          <div class="player-info">
+            <p class="player-track">Featured Vocal</p>
+            <p class="player-sub">Mahima Tolani · Live vocals</p>
+          </div>
+          <div class="player-visualizer" id="playerViz" aria-hidden="true"></div>
+          <div class="player-progress" id="playerProgress"><span id="playerProgressFill"></span></div>
+          <div class="player-time"><span id="playerCurrent">0:00</span><span id="playerDuration">0:00</span></div>
+          <div class="player-controls">
+            <button id="playerRestart" aria-label="Restart"><i class="bx bx-skip-previous"></i></button>
+            <button class="player-play" id="playerPlay" aria-label="Play/Pause"><i class="bx bx-play"></i></button>
+            <button id="playerMute" aria-label="Mute"><i class="bx bx-volume-full"></i></button>
+          </div>
+          <audio id="playerAudio" preload="metadata" src="assets/audio/mahima-vocal.mp3"></audio>
+          <p class="player-note">Press play to hear Mahima sing. 🎶</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="section-head reveal">
+        <span class="section-index">06</span>
+        <h2 class="section-title">Let's <span class="gradient-text">create</span> together</h2>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <p class="lead">Have a project, a song, or an idea worth building? My inbox is always open.</p>
+          <a href="mailto:mahimatolani1998@gmail.com" class="contact-email" data-cursor="hover">
+            <i class="bx bx-envelope"></i> mahimatolani1998@gmail.com
+          </a>
+          <a href="tel:+918209387213" class="contact-email" data-cursor="hover">
+            <i class="bx bx-phone"></i> +91 82093 87213
+          </a>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/mahima-tolani-42a337173" target="_blank" rel="noopener" class="glass" data-cursor="hover"><i class="bx bxl-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/mahima73/" target="_blank" rel="noopener" class="glass" data-cursor="hover"><i class="bx bxl-github"></i> GitHub</a>
+            <a href="https://www.instagram.com/ai_vala_bachpan/" target="_blank" rel="noopener" class="glass" data-cursor="hover"><i class="bx bxl-instagram"></i> Instagram</a>
+          </div>
+        </div>
+
+        <form class="contact-form glass reveal" id="contactForm">
+          <div class="field">
+            <input type="text" id="cName" required placeholder=" " />
+            <label for="cName">Your name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="cEmail" required placeholder=" " />
+            <label for="cEmail">Your email</label>
+          </div>
+          <div class="field">
+            <textarea id="cMsg" rows="4" required placeholder=" "></textarea>
+            <label for="cMsg">Your message</label>
+          </div>
+          <button type="submit" class="btn btn-primary full" data-cursor="hover">
+            Send message <i class="bx bx-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-name">Mahima Tolani</p>
+    <p class="footer-tag">Software Developer · Singer · AI Video Creator</p>
+    <p class="footer-copy">© <span id="year"></span> Mahima Tolani. Designed &amp; built with care.</p>
+    <a href="#home" class="footer-top" data-cursor="hover" aria-label="Back to top"><i class="bx bx-up-arrow-alt"></i></a>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="assets/js/three-scene.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
